@@ -1,0 +1,10 @@
+<div class = "animals">
+    <h3 class = "header">Comcast Grow 2 Code Animals</h3>
+    <ul>
+    <!-- replace with loop -->
+        <li *ngFor = "let animal of animals">{{animal}}</li>
+    </ul>
+    <!-- add input and a button to add a new animal -->
+    <input #newAnimal (keyup.enter) = 'addAnimal(newAnimal.value)' type='text' placeholder = 'Would you like to add a new animal?'/>
+    <button (click) ='addAnimal(newAnimal.value)'>Add</button>
+</div>

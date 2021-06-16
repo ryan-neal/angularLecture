@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-first-angular-project';
+  titleName: string = 'Comcast Grow 2 Code';
+  cityName: string = 'Philadelphia';
+  editableTitle: boolean = false;
+
+  updateTitle(title: string){
+    this.titleName = title;
+    this.editableTitle = false;
+  }
 }

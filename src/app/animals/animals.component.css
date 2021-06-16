@@ -1,0 +1,8 @@
+.animals {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.animals .header {
+    text-decoration: underline;
+}
