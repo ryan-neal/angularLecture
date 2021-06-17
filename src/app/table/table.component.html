@@ -1,0 +1,14 @@
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Job</th>
+        <th>Favorite Animal1</th>
+        <th>Favorite Animal2</th>
+    </tr>
+    <tr *ngFor = "let employee of tableContent">
+        <td>{{employee.name}}</td>
+        <td>{{employee.job}}</td>
+        <td *ngFor = "let animal of employee.favoriteAnimal">{{animal}}</td>
+
+    </tr>
+</table>

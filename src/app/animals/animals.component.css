@@ -6,3 +6,7 @@
 .animals .header {
     text-decoration: underline;
 }
+
+.active {
+    background-color: gold;
+}

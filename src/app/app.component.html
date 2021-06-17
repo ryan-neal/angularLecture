@@ -1,4 +1,4 @@
-<!--The content below is only a placeholder and can be replaced.-->
+
 <div style="text-align:center">
   <h1> Title: 
     <span *ngIf = "!editableTitle; else editTitleBlock" >
@@ -9,7 +9,17 @@
       <button (click) = "updateTitle(title.value)">Update</button>
     </ng-template>
   </h1>
-  <h2> City: {{cityName}};
+
+ <!-- Make city editable --> 
+  <h2> City: 
+    <span *ngIf = "!editableCity; else editCityBlock">
+      <span class = "editable-text" (click) = "editableCity=true;"> {{cityName}} </span>
+    </span>
+    <ng-template #editCityBlock>
+      <input #city (keyup.enter) = "updateCity(city.value)" value = "{{cityName}}"/>
+      <button (click) = "updateCity(city.value)">Update</button>
+    </ng-template>
+    
 
   </h2>
 </div>
@@ -20,5 +30,9 @@
   <div class="column">
     <app-foooooood></app-foooooood>
   </div>
+</div>
+<hr>
+<div class="row">
+  <app-table></app-table>
 </div>
 
